@@ -7,7 +7,7 @@
  */
 void f_rotr_monty(stack_t **head, __attribute__((unused)) unsigned int num)
 {
-	stack_t *cpy;
+	stack_t *c;
 
 	c = *head;
 	if (*head == NULL || (*head)->next == NULL)

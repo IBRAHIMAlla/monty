@@ -27,12 +27,11 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (line_read > 0)
+	for (; line_read > 0; num++)
 	{
 		text = NULL;
 		line_read = getline(&text, &i, reg);
 		bus.text = text;
-		num++;
 		if (line_read > 0)
 		{
 			execute(text, &stack, num, reg);

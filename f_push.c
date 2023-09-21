@@ -17,7 +17,7 @@ void f_push(stack_t **head, unsigned int num)
 		{
 			if (bus.discu[y] > 57 || bus.discu[y] < 48)
 			{
-				fl = 1; 
+				fl = 1;
 			}
 			y++;
 		}

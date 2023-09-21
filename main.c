@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_f bus;
 /**
 * main - monty code interpreter
 * @argc: number of arguments

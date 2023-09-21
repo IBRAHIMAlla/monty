@@ -2,36 +2,24 @@
 /**
  * f_push - add node to the stack
  * @head: stack head
- * @num: line_number
+ * @counter: line_number
  * Return: no return
 */
 void f_push(stack_t **head, unsigned int num)
 {
-	int n, y = 0, fl = 0;
+	stack_t *ptr = malloc(sizeof(stack_t));
 
-	if (bus.discu)
+	if (head == NULL)
+		return;
+	if (ptr == NULL)
 	{
-		if (bus.discu[0] == '-')
-			y++;
-		for (; bus.discu[y] != '\0'; y++)
-		{
-			if (bus.discu[y] > 57 || bus.discu[y] < 48)
-				fl = 1; }
-		if (fl == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", num);
-			fclose(bus.reg);
-			free(bus.text);
-			stack_free(*head);
-			exit(EXIT_FAILURE); }}
-	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", num);
-		fclose(bus.reg);
-		free(bus.text);
-		stack_free(*head);
-		exit(EXIT_FAILURE); }
-	n = atoi(bus.discu);
-	if (bus.lifi == 0)
-		add_node(head, n);
-	else
-		add_queue(head, n);
+		fprintf(stderr, "Error: malloc failed");
+		exit(EXIT_FAILURE);
+	}
+	ptr->n = num;
+	ptr->next = *head;
+	ptr->prev = NULL;
+	if (*head)
+		(*head)->prev = ptr;
+	*head = ptr;
 }

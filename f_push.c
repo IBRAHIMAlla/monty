@@ -7,7 +7,7 @@
 */
 void f_push(stack_t **head, unsigned int num)
 {
-	int m, y = 0, fl = 0;
+	int n, y = 0, fl = 0;
 
 	if (bus.discu)
 	{
@@ -33,9 +33,9 @@ void f_push(stack_t **head, unsigned int num)
 		free(bus.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE); }
-	m = atoi(bus.discu);
+	n = atoi(bus.discu);
 	if (bus.lifi == 0)
-		add_node(head, m);
+		add_node(head, n);
 	else
-		add_queue(head, m);
+		add_queue(head, n);
 }

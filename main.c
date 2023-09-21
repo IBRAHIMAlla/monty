@@ -1,5 +1,5 @@
 #include "monty.h"
-bus_f bus;
+ibra_f ibra;
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	reg = fopen(argv[1], "r");
-	bus.reg = reg;
+	ibra.reg = reg;
 	if (!reg)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		text = NULL;
 		line_read = getline(&text, &i, reg);
-		bus.text = text;
+		ibra.text = text;
 		num++;
 		if (line_read > 0)
 		{

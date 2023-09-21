@@ -24,14 +24,14 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 
-typedef struct bus_m
+typedef struct ibra_m
 {
 	char *discu;
 	FILE *reg;
 	char *text;
-	int lifi;
-}  bus_f;
-extern bus_f bus;
+	int li;
+}  ibra_f;
+extern ibra_f ibra;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode

@@ -9,7 +9,7 @@ void f_queue_monty(stack_t **head, unsigned int num)
 {
 	(void)head;
 	(void)num;
-	bus.lifi = 1;
+	ibra.li = 1;
 }
 
 /**

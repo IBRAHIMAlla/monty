@@ -12,8 +12,8 @@ void f_pop_monty(stack_t **head, unsigned int num)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}

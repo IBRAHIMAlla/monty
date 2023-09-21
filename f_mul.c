@@ -19,8 +19,8 @@ void f_mul_monty(stack_t **head, unsigned int num)
 	if (lght < 2)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}

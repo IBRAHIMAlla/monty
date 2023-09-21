@@ -34,7 +34,7 @@ int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 	opc = strtok(text, " \n\t");
 	if (opc && opc[0] == '#')
 		return (0);
-	bus.discu = strtok(NULL, " \n\t");
+	ibra.discu = strtok(NULL, " \n\t");
 	while (opti[m].opcode && opc)
 	{
 		if (strcmp(opc, opti[m].opcode) == 0)

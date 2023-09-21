@@ -20,8 +20,8 @@ void f_mod_monty(stack_t **head, unsigned int num)
 	if (lght < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -29,8 +29,8 @@ void f_mod_monty(stack_t **head, unsigned int num)
 	if (ptrh->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}

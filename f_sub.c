@@ -16,8 +16,8 @@ void f_sub_monty(stack_t **head, unsigned int num)
 	if (nd < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}

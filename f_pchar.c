@@ -14,16 +14,16 @@ void f_pchar_monty(stack_t **head, unsigned int num)
 	if (!ptrh)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}
 	if (ptrh->n > 127 || ptrh->n < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", num);
-		fclose(bus.reg);
-		free(bus.text);
+		fclose(ibra.reg);
+		free(ibra.text);
 		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}

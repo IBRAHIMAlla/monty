@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	char *text;
 	FILE *reg;
 	size_t i = 0;
-	int line_read = 1;
+	ssize_t line_read = 1;
 	stack_t *stack = NULL;
 	unsigned int num = 0;
 

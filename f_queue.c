@@ -18,7 +18,7 @@ void f_queue(stack_t **head, unsigned int num)
  * @head: head of the stack
  * Return: no return
 */
-void add_queue(stack_t **head, int m)
+void add_queue(stack_t **head, int n)
 {
 	stack_t *node_n, *ax;
 
@@ -28,7 +28,7 @@ void add_queue(stack_t **head, int m)
 	{
 		printf("Error\n");
 	}
-	node_n->m = m;
+	node_n->n = n;
 	node_n->next = NULL;
 	if (ax)
 	{

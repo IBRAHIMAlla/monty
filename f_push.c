@@ -13,7 +13,7 @@ void f_push(stack_t **head, unsigned int num)
 	{
 		if (bus.discu[0] == '-')
 			y++;
-		for (bus.discu[y] != '\0')
+		while (bus.discu[y] != '\0')
 		{
 			if (bus.discu[y] > 57 || bus.discu[y] < 48)
 			{

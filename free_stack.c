@@ -10,7 +10,7 @@ void stack_free(stack_t *head)
 	ax = head;
 	for (; head; head = ax)
 	{
-		aux = head->next;
+		ax = head->next;
 		free(head);
 	}
 }

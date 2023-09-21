@@ -54,4 +54,5 @@ void f_pall(stack_t **head, unsigned int num);
 int execute(char *text, stack_t **stack, unsigned int num, FILE *reg);
 void f_pint(stack_t **head, unsigned int num);
 void f_pop_monty(stack_t **head, unsigned int num);
+void f_swap(stack_t **head, unsigned int num);
 #endif

@@ -8,9 +8,11 @@ void stack_free(stack_t *head)
 	stack_t *ax;
 
 	ax = head;
-	for (; head; head = ax)
+
+	while (ax)
 	{
-		ax = head->next;
+		ax = ax->next;
 		free(head);
+		head = ax;
 	}
 }

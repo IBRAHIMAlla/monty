@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
-  *f_sub_monty- sustration
+  *f_sub_monty - sustration
   *@head: stack head
   *@num: line number
   *Return: no return
@@ -18,7 +18,7 @@ void f_sub_monty(stack_t **head, unsigned int num)
 		fprintf(stderr, "L%d: can't sub, stack too short\n", num);
 		fclose(bus.reg);
 		free(bus.text);
-		stack-free(*head);
+		stack_free(*head);
 		exit(EXIT_FAILURE);
 	}
 	ax = *head;

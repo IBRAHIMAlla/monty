@@ -21,6 +21,7 @@ int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 				{"sub", f_sub_monty},
 				{"div", f_div_monty},
 				{"mul", f_mul_monty},
+				{"mod", f_mod_monty},
 				};
 	unsigned int m = 0;
 	char *opc;

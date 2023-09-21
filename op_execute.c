@@ -10,8 +10,10 @@
 int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 {
 	instruction_t opti[] = {
-				{"push", f_push}, {"pall", f_pall},
+				{"push", f_push},
+				{"pall", f_pall},
 				{"queue", f_queue},
+				{"pint", f_pint},
 				};
 	unsigned int m = 0;
 	char *opc;

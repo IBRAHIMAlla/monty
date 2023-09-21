@@ -56,3 +56,4 @@ void f_queue(stack_t **head, unsigned int num);
 void add_node(stack_t **head, int m);
 void add_queue(stack_t **head, int m);
 void stack_free(stack_t *head);
+void f_pall(stack_t **head, unsigned int num);

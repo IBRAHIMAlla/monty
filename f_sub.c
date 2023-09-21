@@ -2,7 +2,7 @@
 /**
   *f_sub_monty- sustration
   *@head: stack head
-  *@num: line_number
+  *@num: line number
   *Return: no return
  */
 void f_sub_monty(stack_t **head, unsigned int num)

@@ -52,4 +52,5 @@ void add_queue(stack_t **head, int n);
 void stack_free(stack_t *head);
 void f_pall(stack_t **head, unsigned int num);
 int execute(char *text, stack_t **stack, unsigned int num, FILE *reg);
+void f_pint(stack_t **head, unsigned int num);
 #endif

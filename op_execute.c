@@ -9,7 +9,7 @@
 */
 int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 {
-	instruction_t opst[] = {
+	instruction_t opti[] = {
 				{"push", f_push}, {"pall", f_pall},
 				{"queue", f_queue},
 				};
@@ -20,15 +20,15 @@ int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 	if (opc && opc[0] == '#')
 		return (0);
 	bus.discu = strtok(NULL, " \n\t");
-	while (opst[m].opcode && opc)
+	while (opti[m].opcode && opc)
 	{
-		if (strcmp(opc, opst[m].opcode) == 0)
-		{	opst[m].f(stack, num);
+		if (strcmp(opc, opti[m].opcode) == 0)
+		{	opti[m].f(stack, num);
 			return (0);
 		}
 		m++;
 	}
-	if (opc && opst[m].opcode == NULL)
+	if (opc && opti[m].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", num, opc);
 		fclose(reg);
 		free(text);

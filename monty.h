@@ -46,7 +46,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 void f_push(stack_t **head, unsigned int num);
-void f_queue(stack_t **head, unsigned int num);
+void f_queue_monty(stack_t **head, unsigned int num);
 void add_node(stack_t **head, int n);
 void add_queue(stack_t **head, int n);
 void stack_free(stack_t *head);

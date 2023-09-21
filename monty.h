@@ -56,4 +56,5 @@ void f_pint(stack_t **head, unsigned int num);
 void f_pop_monty(stack_t **head, unsigned int num);
 void f_swap_monty(stack_t **head, unsigned int num);
 void f_add_monty(stack_t **head, unsigned int num);
+void f_nop_monty(stack_t **head, unsigned int num);
 #endif

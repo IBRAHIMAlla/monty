@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
-#define _GNU_SOURCE
+#define  _GNU_SOURCE
+#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -22,14 +23,7 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
-/**
- * struct bus_s - variables -args, file, line content
- * @discu: value
- * @reg: pointer to monty file
- * @text: line content
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
- */
+
 typedef struct bus_m
 {
 	char *discu;

@@ -14,6 +14,7 @@ int execute(char *text, stack_t **stack, unsigned int num, FILE *reg)
 				{"pall", f_pall},
 				{"queue", f_queue},
 				{"pint", f_pint},
+				{"pop", f_pop_monty},
 				};
 	unsigned int m = 0;
 	char *opc;

@@ -64,4 +64,5 @@ void f_mod_monty(stack_t **head, unsigned int num);
 void f_pchar_monty(stack_t **head, unsigned int num);
 void f_pstr_monty(stack_t **head, unsigned int num);
 void f_rotl_monty(stack_t **head,  __attribute__((unused)) unsigned int num);
+void f_rotr_monty(stack_t **head, __attribute__((unused)) unsigned int num);
 #endif

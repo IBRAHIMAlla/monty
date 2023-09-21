@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_f bus;
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 	char *text;
 	FILE *reg;
 	size_t i = 0;
-	ssize_t line_read = 1;
+	int line_read = 1;
 	stack_t *stack = NULL;
 	unsigned int num = 0;
 
@@ -21,16 +22,17 @@ int main(int argc, char *argv[])
 	}
 	reg = fopen(argv[1], "r");
 	bus.reg = reg;
-	if (reg == NULL)
+	if (!reg)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	for (; line_read > 0; num++)
+	while (line_read > 0)
 	{
 		text = NULL;
 		line_read = getline(&text, &i, reg);
 		bus.text = text;
+		num++;
 		if (line_read > 0)
 		{
 			execute(text, &stack, num, reg);

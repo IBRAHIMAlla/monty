@@ -59,4 +59,5 @@ void f_add_monty(stack_t **head, unsigned int num);
 void f_nop_monty(stack_t **head, unsigned int num);
 void f_sub_monty(stack_t **head, unsigned int num);
 void f_div_monty(stack_t **head, unsigned int num);
+void f_mul_monty(stack_t **head, unsigned int num);
 #endif
